@@ -76,7 +76,7 @@ def calculate_percentage(value, min_value, max_value):
     return percentage
 
 # Initialize OpenNI SDK
-redistPath = "OpenNI\Win64-Release\sdk\libs"
+redistPath = "OpenNI\Win64-Release\sdk\libs"  //Put your true path
 openni2.initialize(redistPath)
 device = openni2.Device.open_any()
 depth_stream = device.create_depth_stream()
@@ -88,13 +88,11 @@ check, frame = cap.read()
 H, W, _ = frame.shape
 
 #Save Video
-# out = cv2.VideoWriter("test_dt_xyz_ripeness.avi", cv2.VideoWriter_fourcc(*'MP4V'),
+# out = cv2.VideoWriter("name of video.avi", cv2.VideoWriter_fourcc(*'MP4V'),
 #             int(cap.get(cv2.CAP_PROP_FPS)), (W, H))
 
 # Load the YOLO model
-model_path = os.path.join('.', 'Datastrawberry', 'Finished_Model',
-                         '8n_261epochs', 'detect', 'train',
-                         'weights', 'best.pt')
+model_path = os.path.join( "Put your model path file .pt" )
 model = YOLO(model_path)
 
 # Class names
@@ -207,7 +205,7 @@ while True:
         print(f"FPS: {fps:.2f}")
         
 
-    cv2.imshow("Smart Ai Solution", frame)
+    cv2.imshow("Name", frame)
     # out.write(frame)
     check, frame = cap.read()
 

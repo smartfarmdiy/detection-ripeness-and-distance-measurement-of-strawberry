@@ -76,5 +76,9 @@ results = model.train(resume = True)
 
 * After training the model is finished, you will get the model in the form of best.pt and last.pt files for use in our object detection. You can set the file path and put it in my code and try to detect the objects you want.
 
+![image](https://github.com/smartfarmdiy/detection-ripeness-and-distance-measurement-of-strawberry/assets/63504401/57a3d459-cbaa-4d11-9e5f-9dab30093158)
+
+![image](https://github.com/smartfarmdiy/detection-ripeness-and-distance-measurement-of-strawberry/assets/63504401/6e59a357-8862-4417-aed6-851a240e9e1b)
+
 
 

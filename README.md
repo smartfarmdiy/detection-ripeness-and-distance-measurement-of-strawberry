@@ -29,7 +29,7 @@ Strawberry detection by using the YOLOv8 model, Ripeness measurement of strawber
 
 * You will need to annotate the data set of your images. This can be done in [Roboflow Example](https://www.youtube.com/watch?v=wuZtUMEiKWY&list=PLrQjg-8WJZpOnfbFXyOfLlVfkQnRUCjCO&index=13), [CVAT Example](https://www.youtube.com/watch?v=m9fH9OWn8YM&list=PLrQjg-8WJZpOnfbFXyOfLlVfkQnRUCjCO&index=12), or any other appropriate platform. You can see an example from the link I attached.
 
-![Screenshot 2023-07-26 142839](https://github.com/smartfarmdiy/detection-ripeness-and-distance-measurement-of-strawberry/assets/63504401/50861953-ac16-4693-873b-20d38857f787)
+![image](https://github.com/smartfarmdiy/detection-ripeness-and-distance-measurement-of-strawberry/assets/63504401/2ce81ef3-2355-4b3e-927d-90b08d084ddd)
 
 * After that, you need to divide the data into Train and Test, then add Augmentation to add flexibility to our dataset, and then generate data to prepare for the next train model (you can follow the link from above)
 

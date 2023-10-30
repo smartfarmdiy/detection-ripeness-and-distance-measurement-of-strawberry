@@ -23,7 +23,7 @@ Strawberry detection by using the YOLOv8 model, Ripeness measurement of strawber
 
 * Store data in the same folder.
 
-![image](https://github.com/smartfarmdiy/detection-ripeness-and-distance-measurement-of-strawberry/assets/63504401/911c6a78-71c9-42ed-a431-0505409facd0)
+![image](https://github.com/smartfarmdiy/detection-ripeness-and-distance-measurement-of-strawberry/assets/63504401/475fbfe1-cca7-4f72-8f1b-7ed56a8e95f2)
 
 # Annotation
 

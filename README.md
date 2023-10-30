@@ -35,16 +35,12 @@ Strawberry detection by using the YOLOv8 model, Ripeness measurement of strawber
 
 * After that you need to connect Colab Pro to your Google Drive and import the library as per me.
 
-`import os
-import torch
-from ultralytics import YOLO`
-
 <pre>
-```python
 import os
 import torch
 from ultralytics import YOLO
-```
 </pre>
+
+
 
 

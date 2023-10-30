@@ -209,3 +209,4 @@ def calculate_distance(depth_frame, x1, y1, x2, y2):
 # README
 
 * After you have tried following me. Every step should be tested to ensure that each step is effective. So that in the next steps no problems will occur. And when working, you should study the information of your work well first and then plan your work. To make your work systematic and able to solve problems correctly.
+* To create a good dataset, you should take pictures. or find information by yourself In order not to be copyrighted

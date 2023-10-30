@@ -7,9 +7,9 @@ Install the libraries that will be used for the detection system and measure dis
 
 Ex. os, datetime, sqrt, ultralytics, openni, cv2 or numpy etc.
 
-//
+*
 import os
 import datetime
 from math import sqrt
 from ultralytics import YOLO
-//
+*

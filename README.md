@@ -24,10 +24,18 @@ Strawberry detection by using the YOLOv8 model, Ripeness measurement of strawber
 # Annotation
 
 * You will need to annotate the data set of your images. This can be done in [Roboflow](https://www.youtube.com/watch?v=wuZtUMEiKWY&list=PLrQjg-8WJZpOnfbFXyOfLlVfkQnRUCjCO&index=13), [CVAT](https://www.youtube.com/watch?v=m9fH9OWn8YM&list=PLrQjg-8WJZpOnfbFXyOfLlVfkQnRUCjCO&index=12), or any other appropriate platform. You can see an example from the link I attached.
-* 
+
 ![Screenshot 2023-07-26 142839](https://github.com/smartfarmdiy/detection-ripeness-and-distance-measurement-of-strawberry/assets/63504401/50861953-ac16-4693-873b-20d38857f787)
 
+* After that, you need to divide the data into Train and Test, then add Augmentation to add flexibility to our dataset, and then generate data to prepare for the next train model (you can follow the link from above)
 
+# Train Model
 
+* In my part of the model training process, I will do it in Google Colab Pro (Because my data is big), where you need to import the dataset you have already created into Google Drive first.
 
+* After that you need to connect Colab Pro to your Google Drive and import the library as per me.
+
+'import os
+import torch
+from ultralytics import YOLO'
 

@@ -142,4 +142,62 @@ elif (min_color_PartiallyRipe <= avg_color).all() and (avg_color <= max_color_tu
 
 # Orbbec Astra Pro Camera for Diatance Measurement
 
-* In my work, I use an Orbbec Astra Pro Camera to measure the distance between the camera and a strawberry. The camera's Dapth function is used to measure the distance. Before starting the test, you will need to install the camera driver.
+* In my work, I use an Orbbec Astra Pro Camera to measure the distance between the camera and a strawberry. The camera's Dapth function is used to measure the distance. Before starting the test, you will need to install the camera driver and SDK for camera. [Device Support](https://www.orbbec.com/developers/device-support/) [git astra](https://github.com/orbbec/ros_astra_camera)
+
+* Initialize OpenNI SDK (this code for start depth stream)
+
+<pre>
+redistPath = "OpenNI\Win64-Release\sdk\libs"
+openni2.initialize(redistPath)
+device = openni2.Device.open_any()
+depth_stream = device.create_depth_stream()
+depth_stream.start()
+</pre>
+
+* Define constants for smoothing and temporal filtering
+
+<pre>
+SMOOTHING_FACTOR = 0.9  # Adjust this value for the desired smoothing strength
+TEMPORAL_FACTOR = 0.8  # Adjust this value for the desired temporal filtering strength
+prev_avg_depth = None  # Initialize the previous average depth
+</pre>
+
+* function for calculate distance from depth frame in bounding box of strawberry
+
+<pre>
+def calculate_distance(depth_frame, x1, y1, x2, y2):
+    global prev_avg_depth
+
+    # Get depth values within the bounding box
+    p_depth = depth_frame.get_buffer_as_uint16()
+    depth_data = np.array(p_depth) 
+    depth_image = depth_data.reshape(depth_frame.height, depth_frame.width)
+
+    # Calculate the average depth within the bounding box
+    depth_roi = depth_image[y1:y2, x1:x2]
+    avg_depth = np.mean(depth_roi)
+
+    # Apply smoothing filter
+    if prev_avg_depth is not None:
+        avg_depth = (1 - SMOOTHING_FACTOR) * prev_avg_depth + SMOOTHING_FACTOR * avg_depth
+
+    # Apply temporal filtering
+    if prev_avg_depth is not None:
+        avg_depth = TEMPORAL_FACTOR * prev_avg_depth + (1 - TEMPORAL_FACTOR) * avg_depth
+
+    # Update previous average depth
+    prev_avg_depth = avg_depth
+
+    # Convert depth value to distance in centimeters
+    depth_scale = 0.1  # Conversion factor specific to the depth camera
+    distance = avg_depth * depth_scale
+
+    # Calculate individual depth values for each corner of the bounding box
+    depth_x1y1 = depth_image[y1, x1]
+    depth_x1y2 = depth_image[y2, x1]
+    depth_x2y1 = depth_image[y1, x2]
+    depth_x2y2 = depth_image[y2, x2]
+
+    return distance, depth_x1y1, depth_x1y2, depth_x2y1, depth_x2y2
+    # return distance
+</pre>

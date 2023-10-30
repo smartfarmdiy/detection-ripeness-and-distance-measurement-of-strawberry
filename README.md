@@ -43,6 +43,13 @@ from ultralytics import YOLO
 
 * Code for train
 
+Choose a model based on the capabilities of your computer or GPU. The larger the model, the higher the power required to run. Or the smaller the model, the less power is required to run.
+
+![image](https://github.com/smartfarmdiy/detection-ripeness-and-distance-measurement-of-strawberry/assets/63504401/e8f39c00-a7b5-4313-96c0-a54c65d053a5)
+
+![image](https://github.com/smartfarmdiy/detection-ripeness-and-distance-measurement-of-strawberry/assets/63504401/9178a6ff-9a1c-42bd-834d-b417b7d399a1)
+
+from above info you can click [YOLOv8 ultralytics](https://github.com/ultralytics/ultralytics) to lerning more.
 <pre>
 from ultralytics import YOLO
 

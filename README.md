@@ -82,7 +82,7 @@ results = model.train(resume = True)
 
 # Ripeness Measurement
 
-* To measure the ripeness of my strawberries I will use the color value technique, within my code it will give the ripeness level as follows:
+To measure the ripeness of my strawberries I will use the color value technique, within my code it will give the ripeness level as follows:
 
 - Unripe will be set <= 25% of ripeness.
 
@@ -93,3 +93,33 @@ results = model.train(resume = True)
 - Fully Ripe will be set <= 100% of ripeness
 
 - Rotten will be set 0% of ripeness
+
+# Define the minimum and maximum color values for class
+
+<pre>
+min_color_unripe = (0, 128, 0)
+max_color_turning = (255, 255, 255)
+
+min_color_PartiallyRipe = (0, 35, 129)
+max_color_turning1 = (255, 255, 255)
+</pre>
+
+# Function to calculate percentage within a range
+
+<pre>
+def calculate_percentage(value, min_value, max_value):
+    # Ensure that the value is within the specified range
+    value = (max(min_value[0], min(max_value[0], value[0])),
+             max(min_value[1], min(max_value[1], value[1])),
+             max(min_value[2], min(max_value[2], value[2])))
+
+    # Calculate the percentage for each channel (B, G, R)
+    percentage_b = ((value[0] - min_value[0]) / (max_value[0] - min_value[0])) * 100
+    percentage_g = ((value[1] - min_value[1]) / (max_value[1] - min_value[1])) * 100
+    percentage_r = ((value[2] - min_value[2]) / (max_value[2] - min_value[2])) * 100
+
+    # Calculate the average percentage across channels
+    percentage = (percentage_b + percentage_g + percentage_r) / 3.0
+ 
+    return percentage
+</pre>

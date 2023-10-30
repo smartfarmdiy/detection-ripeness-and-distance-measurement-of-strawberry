@@ -10,7 +10,7 @@ Strawberry detection by using the YOLOv8 model, Ripeness measurement of strawber
 
 # Select Framework for train model
 
-* I select Model [YOLOv8 ultralytics](https://www.example.com](https://github.com/ultralytics/ultralytics)https://github.com/ultralytics/ultralytics)
+* I select Model [YOLOv8 ultralytics](https://github.com/ultralytics/ultralytics)
 (You can learn the details of the model I chose from the link.)
 
 

@@ -19,7 +19,7 @@ I used python 3.9.7 for this work.
 
 # Prepare Data
 
-* Prepare your dataset. You should get a lot of images of the objects you are interested in detecting in order to train the model. Because the bigger the data, the better the performance of your model.
+* Prepare your dataset. You should get a lot of images of the objects you are interested in detecting in order to train the model or A dataset that someone has already created can be found on the website [OpenimageDataset](https://storage.googleapis.com/openimages/web/index.html) or [Roboflow](https://roboflow.com/) But you can only use it for example and not for actual use because the free dataset is not very specific to your work. Because the bigger the data, the better the performance of your model.
 
 * Store data in the same folder.
 
@@ -27,7 +27,7 @@ I used python 3.9.7 for this work.
 
 # Annotation
 
-* You will need to annotate the data set of your images. This can be done in [Roboflow](https://www.youtube.com/watch?v=wuZtUMEiKWY&list=PLrQjg-8WJZpOnfbFXyOfLlVfkQnRUCjCO&index=13), [CVAT](https://www.youtube.com/watch?v=m9fH9OWn8YM&list=PLrQjg-8WJZpOnfbFXyOfLlVfkQnRUCjCO&index=12), or any other appropriate platform. You can see an example from the link I attached.
+* You will need to annotate the data set of your images. This can be done in [Roboflow Example](https://www.youtube.com/watch?v=wuZtUMEiKWY&list=PLrQjg-8WJZpOnfbFXyOfLlVfkQnRUCjCO&index=13), [CVAT Example](https://www.youtube.com/watch?v=m9fH9OWn8YM&list=PLrQjg-8WJZpOnfbFXyOfLlVfkQnRUCjCO&index=12), or any other appropriate platform. You can see an example from the link I attached.
 
 ![Screenshot 2023-07-26 142839](https://github.com/smartfarmdiy/detection-ripeness-and-distance-measurement-of-strawberry/assets/63504401/50861953-ac16-4693-873b-20d38857f787)
 

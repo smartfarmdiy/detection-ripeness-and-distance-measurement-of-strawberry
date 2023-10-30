@@ -94,7 +94,7 @@ To measure the ripeness of my strawberries I will use the color value technique,
 
 - Rotten will be set 0% of ripeness
 
-# Define the minimum and maximum color values for class
+* Define the minimum and maximum color values for class
 
 <pre>
 min_color_unripe = (0, 128, 0)
@@ -104,7 +104,7 @@ min_color_PartiallyRipe = (0, 35, 129)
 max_color_turning1 = (255, 255, 255)
 </pre>
 
-# Function to calculate percentage within a range
+* Function to calculate percentage within a range
 
 <pre>
 def calculate_percentage(value, min_value, max_value):
@@ -122,4 +122,20 @@ def calculate_percentage(value, min_value, max_value):
     percentage = (percentage_b + percentage_g + percentage_r) / 3.0
  
     return percentage
+</pre>
+
+* Code for specifying the color range There will be an average of the color values within the Bounding Box of that strawberry. This is then compared to a given color range where I will give the fruit green to white at 0 % ripeness to 25 % ripeness and from white to red at 25 % ripeness to 100 % ripeness. Rotten results will be given as 0 % ripeness (ripeness color value or percentage of ripeness Different for each fruit which you can use my code as a reference in your work)
+
+<pre>
+if (min_color_unripe <= avg_color).all() and (avg_color <= max_color_turning).all():
+
+    percentage = calculate_percentage(avg_color, min_color_unripe, max_color_turning)
+    color_rec = (0, int(255 * (1 - percentage / 100)), int(255 * (percentage / 100)))
+    ripeness_percentage = percentage * (25 / 100)
+
+elif (min_color_PartiallyRipe <= avg_color).all() and (avg_color <= max_color_turning1).all():
+
+    percentage = calculate_percentage(avg_color, min_color_PartiallyRipe, max_color_turning1)
+    color_rec = (0, int(255 * (1 - percentage / 100)), int(255 * (percentage / 100)))
+    ripeness_percentage = ((100 - percentage) * (75 / 100)) + 25
 </pre>

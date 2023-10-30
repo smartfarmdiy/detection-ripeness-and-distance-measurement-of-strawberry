@@ -15,9 +15,10 @@ Strawberry detection by using the YOLOv8 model, Ripeness measurement of strawber
 
 # Prepare Data
 
-*Prepare your dataset. You should get a lot of images of the objects you are interested in detecting in order to train the model. Because the bigger the data, the better the performance of your model.
+* Prepare your dataset. You should get a lot of images of the objects you are interested in detecting in order to train the model. Because the bigger the data, the better the performance of your model.
 
-*Store data in the same folder.
+* Store data in the same folder.
+
 ![image](https://github.com/smartfarmdiy/detection-ripeness-and-distance-measurement-of-strawberry/assets/63504401/911c6a78-71c9-42ed-a431-0505409facd0)
 
 

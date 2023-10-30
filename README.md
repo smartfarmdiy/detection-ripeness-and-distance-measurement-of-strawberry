@@ -80,5 +80,16 @@ results = model.train(resume = True)
 
 ![image](https://github.com/smartfarmdiy/detection-ripeness-and-distance-measurement-of-strawberry/assets/63504401/6e59a357-8862-4417-aed6-851a240e9e1b)
 
+# Ripeness Measurement
 
+* To measure the ripeness of my strawberries I will use the color value technique, within my code it will give the ripeness level as follows:
 
+- Unripe will be set <= 25% of ripeness.
+
+- Turning will be set <= 50% of ripeness
+
+- Partially Ripe is will be set <= 75% of ripeness
+
+- Fully Ripe will be set <= 100% of ripeness
+
+- Rotten will be set 0% of ripeness

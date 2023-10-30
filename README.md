@@ -33,7 +33,7 @@ Strawberry detection by using the YOLOv8 model, Ripeness measurement of strawber
 
 * In my part of the model training process, I will do it in Google Colab Pro (Because my data is big), where you need to import the dataset you have already created into Google Drive first.
 
-* After that you need to connect Colab Pro to your Google Drive and import the library.
+* After that you need to connect Colab Pro to your Google Drive and import the library. [Train Docs](https://docs.ultralytics.com/modes/train/)
 
 <pre>
 import os
@@ -139,3 +139,7 @@ elif (min_color_PartiallyRipe <= avg_color).all() and (avg_color <= max_color_tu
     color_rec = (0, int(255 * (1 - percentage / 100)), int(255 * (percentage / 100)))
     ripeness_percentage = ((100 - percentage) * (75 / 100)) + 25
 </pre>
+
+# Orbbec Astra Pro Camera for Diatance Measurement
+
+* In my work, I use an Orbbec Astra Pro Camera to measure the distance between the camera and a strawberry. The camera's Dapth function is used to measure the distance. Before starting the test, you will need to install the camera driver.

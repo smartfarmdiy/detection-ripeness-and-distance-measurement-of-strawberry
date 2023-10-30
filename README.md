@@ -8,6 +8,10 @@ Strawberry detection by using the YOLOv8 model, Ripeness measurement of strawber
 * Install the libraries that will be used for the detection system and measure distance.
   Ex. os, datetime, sqrt, ultralytics, openni, cv2 or numpy etc.
 
+`pip install opencv-python numpy openni-python ultralytics`
+
+I used python 3.9.7 for this work.
+
 # Select Framework for train model
 
 * I select Model [YOLOv8 ultralytics](https://github.com/ultralytics/ultralytics)

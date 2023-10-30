@@ -142,7 +142,7 @@ elif (min_color_PartiallyRipe <= avg_color).all() and (avg_color <= max_color_tu
 
 # Orbbec Astra Pro Camera for Diatance Measurement
 
-* In my work, I use an Orbbec Astra Pro Camera to measure the distance between the camera and a strawberry. The camera's Dapth function is used to measure the distance. Before starting the test, you will need to install the camera driver and SDK for camera. [Device Support](https://www.orbbec.com/developers/device-support/) [git astra](https://github.com/orbbec/ros_astra_camera)
+* In my work, I use an Orbbec Astra Pro Camera to measure the distance between the camera and a strawberry. The camera's Dapth function is used to measure the distance. Before starting the test, you will need to install the camera driver and SDK for camera. [Device Support](https://www.orbbec.com/developers/device-support/) and [Git astra](https://github.com/orbbec/ros_astra_camera)
 
 * Initialize OpenNI SDK (this code for start depth stream)
 

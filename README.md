@@ -33,7 +33,7 @@ Strawberry detection by using the YOLOv8 model, Ripeness measurement of strawber
 
 * In my part of the model training process, I will do it in Google Colab Pro (Because my data is big), where you need to import the dataset you have already created into Google Drive first.
 
-* After that you need to connect Colab Pro to your Google Drive and import the library as per me.
+* After that you need to connect Colab Pro to your Google Drive and import the library.
 
 <pre>
 import os
@@ -41,6 +41,27 @@ import torch
 from ultralytics import YOLO
 </pre>
 
+* Code for train
 
+<pre>
+from ultralytics import YOLO
 
+# Load a model
+model = YOLO("yolov8n.yaml")
+
+# Use the model
+results = model.train(data="/content/drive/MyDrive/Strawberry_dataset/google_colab_config.yaml", epochs=200, imgsz =640)
+</pre>
+
+* If error this code is Load Checkpoint to continuous
+
+<pre>
+from ultralytics import YOLO
+
+# Load a model
+model = YOLO("/content/drive/MyDrive/Strawberry_dataset/33resume/detect/train/weights/last.pt")
+
+# Resume training
+results = model.train(resume = True)
+</pre>
 

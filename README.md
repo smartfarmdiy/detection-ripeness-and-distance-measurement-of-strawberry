@@ -21,5 +21,13 @@ Strawberry detection by using the YOLOv8 model, Ripeness measurement of strawber
 
 ![image](https://github.com/smartfarmdiy/detection-ripeness-and-distance-measurement-of-strawberry/assets/63504401/911c6a78-71c9-42ed-a431-0505409facd0)
 
+# Annotation
+
+* You will need to annotate the data set of your images. This can be done in [Roboflow].(https://www.youtube.com/watch?v=wuZtUMEiKWY&list=PLrQjg-8WJZpOnfbFXyOfLlVfkQnRUCjCO&index=13)., [CVAT].(https://www.youtube.com/watch?v=m9fH9OWn8YM&list=PLrQjg-8WJZpOnfbFXyOfLlVfkQnRUCjCO&index=12), or any other appropriate platform. You can see an example from the link I attached.
+* 
+![Screenshot 2023-07-26 142839](https://github.com/smartfarmdiy/detection-ripeness-and-distance-measurement-of-strawberry/assets/63504401/50861953-ac16-4693-873b-20d38857f787)
+
+
+
 
 

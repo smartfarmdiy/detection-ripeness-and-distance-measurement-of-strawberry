@@ -72,3 +72,9 @@ model = YOLO("/content/drive/MyDrive/Strawberry_dataset/33resume/detect/train/we
 results = model.train(resume = True)
 </pre>
 
+# Detection for Strawberry
+
+* After training the model is finished, you will get the model in the form of best.pt and last.pt files for use in our object detection. You can set the file path and put it in my code and try to detect the objects you want.
+
+
+

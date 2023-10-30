@@ -13,6 +13,12 @@ Strawberry detection by using the YOLOv8 model, Ripeness measurement of strawber
 * I select Model [YOLOv8 ultralytics](https://github.com/ultralytics/ultralytics)
 (You can learn the details of the model I chose from the link.)
 
+# Prepare Data
+
+*Prepare your dataset. You should get a lot of images of the objects you are interested in detecting in order to train the model. Because the bigger the data, the better the performance of your model.
+
+*Store data in the same folder.
+![image](https://github.com/smartfarmdiy/detection-ripeness-and-distance-measurement-of-strawberry/assets/63504401/911c6a78-71c9-42ed-a431-0505409facd0)
 
 
 

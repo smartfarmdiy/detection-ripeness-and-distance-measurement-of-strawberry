@@ -39,7 +39,12 @@ Strawberry detection by using the YOLOv8 model, Ripeness measurement of strawber
 import torch
 from ultralytics import YOLO`
 
-const greeting = "Hello, world!";
-console.log(greeting);
+<pre>
+```python
+import os
+import torch
+from ultralytics import YOLO
+```
+</pre>
 
 
